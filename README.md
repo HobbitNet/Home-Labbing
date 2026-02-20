@@ -49,7 +49,7 @@ Focus: To create a zero trust architecture & create a way to have secure remote 
 * Key Project: Implementation of a tailscale based wireguard mesh network.
 * Objective: Secure P2P connectivity between my mobile, laptop, and desktop without port forwarding.
 
-### LLM Operations 🤖:
+### [🤖 LLM Operations](./AI-Operations/):
 Focus: Learn more about local LLM Hosting & Private cloud AI
 * Key Project: Self hosting Ollama with gemm 3 12b for private, offline intelligence.
 * Objective: Offloading AI inference to the Ryzen 9 5900x via remote API calls.
