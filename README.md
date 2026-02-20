@@ -34,7 +34,7 @@ As a student in cybersecurity, the decision to self hosting was driven by a risk
 
 ### 2.) Attack surface management
 * Risk: Hosting an API (Ollama) can create a new entry point for attackers.
-* Mitigation: Instead of approaching this through port forwarding, which opens ports on my router. I had utilized a zero trust overlay ([Tailscale](https://tailscale.com/)/Wiregaurd). This helps ensure the AI API is only visible to authenticated, encrypted nodes in my mesh network, this effectively makes it "invisible" to the public internet. 
+* Mitigation: Instead of approaching this through port forwarding, which opens ports on my router. I had utilized a zero trust overlay ([Tailscale](https://tailscale.com/)/Wireguard). This helps ensure the AI API is only visible to authenticated, encrypted nodes in my mesh network, this effectively makes it "invisible" to the public internet. 
 
 ### 3.) Attack surface management
 * Offline Capability: My lab remains functional regardless of internet connectivity or external service outages.
