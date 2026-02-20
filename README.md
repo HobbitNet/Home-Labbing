@@ -25,7 +25,7 @@ To support a more resource heavy AI model and multiple VM's for my other labs I'
 | **Meta Quest 3** | AR Interface | Remote Desktop / Immersive Workflow |> [!IMPORTANT]
 > **Security Posture Note:** All remote nodes communicate with the Primary Host exclusively over a peer-to-peer WireGuard mesh (Tailscale). This ensures that management traffic, Parsec streams, and AI queries are encrypted end-to-end and are never exposed to the public internet, this is incredibly useful when I want to work on projects or tinker around when away from home
 
-## Security Analysis: Local AI vs Cloud Based LLMs 
+## Security Analysis: Local AI vs Cloud Based LLMs ☁️
 As a student in cybersecurity, the decision to self hosting was driven by a risk to reward analysis of data privacy and attack surface management. 
 
 ### 1.)  Data sovereignty & privacy
@@ -54,7 +54,7 @@ Focus: Learn more about local LLM Hosting & Private cloud AI
 * Key Project: Self hosting Ollama with gemm 3 12b for private, offline intelligence.
 * Objective: Offloading AI inference to the Ryzen 9 5900x via remote API calls.
 
-## Current goals 📈:
+## 📈 Current goals:
 * [ ] Complete CompTIA Security+ (SY0-701) Certification.
 * [ ] Implement Open WebUI as a frontend for the local Ollama instance.
 * [ ] Configure Tailscale ACLs for more granular access control between lab VMs.
