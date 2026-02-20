@@ -1,3 +1,6 @@
+[⬅️ Back to Home](../README.md)
+---
+
 # Networking & Secure Connectivity 🌐
 ## Overview
 This module is focused on the implementation of a zero trust overlay network that helps facililitate secure communication between the "HobbitNet" primary host and my remote client nodes. By taking advantage of a mesh VPN architecture, I have removed the need for edge perimeter vulnerabilities such as port forwarding.  
