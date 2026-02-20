@@ -25,12 +25,20 @@ To support a more resource heavy AI model and multiple VM's for my other labs I'
 | **Meta Quest 3** | AR Interface | Remote Desktop / Immersive Workflow |> [!IMPORTANT]
 > **Security Posture Note:** All remote nodes communicate with the Primary Host exclusively over a peer-to-peer WireGuard mesh (Tailscale). This ensures that management traffic, Parsec streams, and AI queries are encrypted end-to-end and are never exposed to the public internet, this is incredibly useful when I want to work on projects or tinker around when away from home
 
-## Lab Roadmap & Modules 🌐
+## Lab Roadmap & Modules 
 This lab will be divided up into different domains, Each directory will contain it's own detailed documentation and configuration logs.
 
-### Networking:
+### Networking 🌐:
 Focus: To create a zero trust architecture & create a way to have secure remote access to the host system.
 * Key Project: Implementation of a tailscale bsed wireguard mesh network.
 * Objective: Secure P2P connectivity between my mobile, laptop, and desktop without port forwarding.
 
-### LLM Operations:
+### LLM Operations 🤖:
+Focus: Learn more about local LLM Hosting & Private cloud AI
+* Key Project: Self hosting Ollama with gemm 3 12b for private, offline intelligence.
+* Objective: Offloading AI inference to the Ryzen 9 5900x via remote API calls.
+
+## Current goals 📈:
+* [ ] Complete CompTIA Security+ (SY0-701) Certification.
+* [ ] Implement Open WebUI as a frontend for the local Ollama instance.
+* [ ] Configure Tailscale ACLs for more granular access control between lab VMs.
