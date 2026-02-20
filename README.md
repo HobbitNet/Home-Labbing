@@ -30,7 +30,7 @@ This lab will be divided up into different domains, Each directory will contain 
 
 ### Networking:
 Focus: To create a zero trust architecture & create a way to have secure remote access to the host system.
-* **Key Project: Implementation of a tailscale bsed wireguard mesh network.
-* **Objective: Secure P2P connectivity between my mobile, laptop, and desktop without port forwarding.
+* Key Project: Implementation of a tailscale bsed wireguard mesh network.
+* Objective: Secure P2P connectivity between my mobile, laptop, and desktop without port forwarding.
 
 ### LLM Operations:
