@@ -21,7 +21,7 @@ This folder serves to contain sanitized templates & other configuration notes fo
 
 ### 3.) Config intergrity & Anti drift measures
 To Ensure a better security stance, and to scale this system out futher I had implemented several new measures to prevent configuration drift which was a new concept to me, it's essentially to prevent the gradual deviation of the live environment from it's secure documented state.
-* Policy as code (Iac): The [tailscalepolicy.json](./Configs/tailscalepolicy.json) being in this repository has allowed me to establish a "single source of truth" which means any future manual changes in the Tailscale console can be audited against this current file to ensure they align with my original security stance
+* Policy as code (Iac): The [Tailscale Policy JSON](./Configs/tailscalepolicy.json) being in this repository has allowed me to establish a "single source of truth" which means any future manual changes in the Tailscale console can be audited against this current file to ensure they align with my original security stance
 * Automated policy validation: Thanks to Gemma the test section with the ACL config acts as a continous validation layer. Everytime an update is proposed it'll automatically check against my security logic. 
 *Identity based persistence: Using tags over the IP addresses helps ensure the security policy remains static even if hardware is replaced or the network interface changes at some point, this helps prevent the possibility of firewall rot which is typically caused from obsolote IP based rules.
 
