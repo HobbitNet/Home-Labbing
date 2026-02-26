@@ -1,0 +1,38 @@
+{
+	"tagOwners": {
+		"tag:Parsec-Ollama-host": ["admin@hobbitnet.local"],
+		"tag:Personal-client":    ["admin@hobbitnet.local"],
+		"tag:Ollama-Access":      ["admin@hobbitnet.local"],
+		"tag:GF-client":          ["admin@hobbitnet.local"],
+	},
+
+	"acls": [
+		{
+			"action": "accept",
+			"src":    ["tag:Personal-client"],
+			"dst":    ["tag:Parsec-Ollama-host:8000-8010", "tag:Parsec-Ollama-host:9000"],
+		},
+		{
+			"action": "accept",
+			"src":    ["tag:Personal-client"],
+			"dst":    ["tag:Parsec-Ollama-host:11434"],
+		},
+		{
+			"action": "accept",
+			"src":    ["tag:GF-client"],
+			"dst":    ["tag:Parsec-Ollama-host:11434"],
+		},
+	],
+	"tests": [
+		{
+			"user":  "tag:Personal-client",
+			"allow": ["tag:Parsec-Ollama-host:8000", "tag:Parsec-Ollama-host:11434"],
+			"deny":  ["tag:GF-client:22"],
+		},
+		{
+			"user":  "tag:GF-client",
+			"allow": ["tag:Parsec-Ollama-host:11434"],
+			"deny":  ["tag:Parsec-Ollama-host:8000", "tag:Personal-client:11434"],
+		},
+	],
+}
