@@ -40,21 +40,32 @@ As a student in cybersecurity, the decision to self hosting was driven by a risk
 * Offline Capability: My lab remains functional regardless of internet connectivity or external service outages.
 * Model integrity: I control the specific AI version and the quantization of the model, ensuring consistent performance without any "stealth" updates from a provider
 
+## Security Implementation: Zero Trust Architecture
+As of Feburuary 25, I have trainstioned the Tailscale network from a defualt "allow all" state to a **Zero Trust (Deny-by-Default)** architecture using Tailscale ACLs and Gemma 3 to assist with learning how to setup up the JSON config file.
+
+### Key Security Features:
+* **Implicit Deny**: All lateral movement should now be blocked by default.
+* **Micro-segmentation**: By using Tailscale tag (`tag:parsec-ollama-host`, `tag:personal-client`), I have isolated specific ports.
+* **Least Privilege Access**:
+    * **Admins**: Full access to Parsec (8000-9000) and Ollama (11434).
+    * **Guests/External (Future)**: I had restricted guest accounts strictly to the Ollama API port, which prevents access to the host desktop or management interfaces.
+* **Automated Policy Testing**: Thanks to Gemma 3 we managed to implement built in ACL tests which verify that the security rules are enforced correctly upon every update.
+
 
 ## Lab Roadmap & Modules 
 This lab will be divided up into different domains, Each directory will contain it's own detailed documentation and configuration logs.
 
-### [🌐 Networking](./Networking/): 
+### [Networking](./Networking/): 
 Focus: To create a zero trust architecture & create a way to have secure remote access to the host system.
 * Key Project: Implementation of a tailscale based wireguard mesh network.
 * Objective: Secure P2P connectivity between my mobile, laptop, and desktop without port forwarding.
 
-### [🤖 LLM Operations](./AI-Operations/):
+### [LLM Operations](./AI-Operations/):
 Focus: Learn more about local LLM Hosting & Private cloud AI
 * Key Project: Self hosting Ollama with gemm 3 12b for private, offline intelligence.
 * Objective: Offloading AI inference to the Ryzen 9 5900x via remote API calls.
 
 ## 📈 Current goals:
 * [ ] Complete CompTIA Security+ (SY0-701) Certification.
-* [ ] Implement Open WebUI as a frontend for the local Ollama instance.
-* [ ] Configure Tailscale ACLs for more granular access control between lab VMs.
+* [ ] Implement Tailscale SSH for secure, keyless terminal management
+* [x] Configure Tailscale ACLs for more granular access control between devices
