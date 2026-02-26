@@ -16,7 +16,7 @@ This folder serves to contain sanitized templates & other configuration notes fo
 ### 2.) tailscale-policy.json (Active policy)
 * Purpose: Creates a single source of truth.
 * Security model: Enforces the princpile of least privelege and implicit deny. By removing the default "allow all" from Tailscale, every connection must now be explicitly authorized by a rule.
-* Logic: This is to make an identity based tagging system (tag:personal-client, tag:parsec:parsec-ollama-host) which ensures that management devices have the full access while future guest nodes (like the future tag:gf-client) are mircor sgemented to stritcly the 11434 port for Ollama queries.
+* Logic: This is to make an identity based tagging system (tag:personal-client, tag:parsec:parsec-ollama-host) which ensures that management devices have the full access while future guest nodes (like the future tag:gf-client) are mirco segemented to stritcly the 11434 port for Ollama queries.
 * Validation: This process indluded a built in automated security test which verifies the firewall logic everytime a change is saved to a prevent any configuration drift.
 
 ### 3.) Config intergrity & Anti drift measures
